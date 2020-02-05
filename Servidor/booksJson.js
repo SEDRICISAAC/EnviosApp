@@ -1,30 +1,13 @@
-db.books.insert([
+db.sillas.insert([
     {
-        title:'lovecraft',
-        genere:'ficcion',
-        author:'Howard',
-        read:false
+        nombre:'lovecraft',
+        caracteristica:'ficcion',
+        
     },
     {
-        title:'lovecraft',
-        genere:'ficcion',
-        author:'Howard',
-        read:false
-    }, {
-        title:'lovecraft',
-        genere:'ficcion',
-        author:'Howard',
-        read:false
-    }, {
-        title:'lovecraft',
-        genere:'ficcion',
-        author:'Howard',
-        read:false
-    }, {
-        title:'lovecraft',
-        genere:'ficcion',
-        author:'Howard',
-        read:false
+        nombre:'lovecraft',
+        caracteristica:'ficcion',
+        
     }
 
 ])

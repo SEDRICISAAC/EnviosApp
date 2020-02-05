@@ -1,15 +1,35 @@
 const express = require('express');
-const mongoose=require('mongoose');
+const morgan = require('morgan');
 const app = express();
-const db=mongose.conect('mongodb://localhost/bookAPI');
-const bookRouter=express.Router(); 
-const port = process.env.PORT || 3000;
-const Book=require('./models/bookModel');
+
+//const sillaRouter=express.Router(); 
+app.set('port', process.env.PORT || 3000);
+app.use(morgan('dev'));
+app.use(express.urlencoded({extends:false}))
+//const silla=require('./silla');
+
+
+
+//sillaRouter.route('/procesar')
+ // .get((req, res) => {
+   // const{query} = req;
+   // mesa.find(query, (err, books) => {
+   //   if (err){
+    //    return res.send(err);
+    //  }
+    //  return res.send(mesa)
+ // });
+//});
+//app.use('/api', sillaRouter);
+
+
 
 app.get('/', (req, res) => {
-  res.send('Bienvenidos al Yavirac Dog!');
+  return res.send('holaaa');
+  }
+);
+
+app.listen(app.get('port'), () => {
+  console.log(`Running on port ${app.get('port')}`);
 });
 
-app.listen(port, () => {
-  console.log(`Running on port ${port}`);
-});
