@@ -1,14 +1,14 @@
 const  { Router } = require('express');
+const Envio = require('../modelo/Envio');
 
-const router = Router();
+const routerApi = Router();
 
-router.get('/procesar')
- .get((req, res) => {
-   const data = {
-     "name":"Pao",
-   }
-    return res.send('data')
-    
-  
-});
-module.exports = router;
+routerApi.route('/procesar')
+  .get((req, res) => {
+    let ubicaciones = new Envio();
+
+    res.json(ubicaciones);
+  });
+
+
+module.exports = routerApi;
